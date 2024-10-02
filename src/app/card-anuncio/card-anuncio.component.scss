@@ -1,0 +1,88 @@
+.horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  padding: 16px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  height: 10px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-track {
+  background: #d1d3e2;
+}
+
+.scroll-container {
+  display: flex;
+}
+
+.scroll-card {
+  flex: 0 0 auto;
+  width: 85vw; /* Ocupa 85% del ancho en móviles */
+  max-width: 450px;
+  margin: 0 24px; /* Margen entre las tarjetas */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+  cursor: pointer;
+  transform: scale(0.9); /* Tamaño reducido cuando no está seleccionada */
+}
+
+.scroll-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Ajustes del título de la tarjeta */
+ion-card-header {
+  background-color: #f8f9fc;
+  padding: 12px;
+  border-radius: 0 0 12px 12px;
+  text-align: center; /* Centra el texto del título */
+}
+
+ion-card-title {
+  font-size: 1.2rem; /* Tamaño de fuente ajustado para caber en el móvil */
+  font-weight: bold;
+  color: #4e73df;
+  margin-bottom: 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; /* Aplica puntos suspensivos si el texto es muy largo */
+}
+
+/* Ajustes del contenido de la tarjeta */
+ion-card-content {
+  font-size: 0.95rem; /* Tamaño de fuente más pequeño para móviles */
+  color: #6c757d;
+  line-height: 1.5;
+  padding: 12px;
+  max-height: 100px; /* Limita la altura máxima del contenido */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Aplica puntos suspensivos si el texto es muy largo */
+  white-space: normal; /* Permite que el texto ocupe más de una línea */
+}
+
+/* Tarjeta seleccionada (opcional, para resaltar la selección) */
+.scroll-card.selected {
+  transform: scale(1); /* Agranda la tarjeta seleccionada */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+  .scroll-card {
+    width: 60vw; /* En tablets y pantallas grandes ocupa un 60% del ancho */
+  }
+}
+
+@media (min-width: 1200px) {
+  .scroll-card {
+    width: 40vw; /* En pantallas muy grandes ocupa un 40% del ancho */
+  }
+}
