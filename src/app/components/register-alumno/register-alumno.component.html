@@ -1,0 +1,73 @@
+<div class="ion-page" id="main-content"></div>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Registrar alumno
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form method="POST" enctype="multipart/form-data" autocomplete="off">
+    <ion-item>
+      <ion-label position="floating">Nombre del alumno</ion-label>
+      <ion-input type="text" formControlName="name" name="username" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Apellido Paterno</ion-label>
+      <ion-input type="text" formControlName="flastname" name="flastname" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Apellido Materno</ion-label>
+      <ion-input type="text" formControlName="slastname" name="slastname" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Numero de control escolar</ion-label>
+      <ion-input type="text" formControlName="controlescolar" name="controlescolar" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Curp</ion-label>
+      <ion-input type="text" formControlName="curp" name="curp" required></ion-input>
+    </ion-item>
+
+    <ion-list>
+      <ion-item>
+        <ion-select aria-label="Tutor" placeholder="Selecciona al tutor del alumno" formControlName="tutor">
+          <ion-select-option>turo</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <br>
+    <ion-list>
+      <ion-item>
+        <ion-select aria-label="Grupos" placeholder="Selecciona el grupo del alumno" formControlName="group">
+          <ion-select-option>Nombre</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <br>
+    <ion-item>
+      <ion-label position="floating">Fecha de nacimiento</ion-label>
+      <ion-input type="date" formControlName="birthdate" name="birthdate" required></ion-input>
+    </ion-item><br>
+
+    <ion-item>
+      <ion-label>Cargar imagen:</ion-label>
+      <input type="file" formControlName="file" id="fileInput" hidden (change)="onFileSelected($event)">
+      <ion-button size="default" shape="round" expand="block" color="secondary"
+        onClick="document.getElementById('fileInput').click()">
+        <ion-icon slot="start" name="image"></ion-icon>
+        Seleccionar Archivo
+      </ion-button>
+    </ion-item>
+    <br>
+
+    <ion-button color="secondary" type="submit" expand="block" shape="round">Registrar alumno</ion-button>
+  </form>
+</ion-content>

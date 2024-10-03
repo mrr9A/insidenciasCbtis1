@@ -1,1 +1,16 @@
 
+ion-tab-button {
+  --background: transparent;
+  --color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+ion-tab-button.tab-selected {
+  --background: #dfe7f5; /* Azul */
+  --color: white;
+  border-radius: 100px 100px 100px 100px; /* Medio óvalo */
+}
+
+ion-tab-bar {
+  --background: white;
+}

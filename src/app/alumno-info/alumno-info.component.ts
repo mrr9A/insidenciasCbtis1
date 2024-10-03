@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { addIcons } from 'ionicons';
+import { caretDownSharp } from 'ionicons/icons';
 
 @Component({
   selector: 'app-alumno-info',
@@ -10,7 +12,9 @@ import { IonicModule } from '@ionic/angular';
 })
 export class AlumnoInfoComponent  implements OnInit {
 
-  constructor() { }
+  constructor() {
+    addIcons({caretDownSharp})
+  }
 
   ngOnInit() {}
 
