@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { addIcons } from 'ionicons';
-import { image, person } from 'ionicons/icons';
+import { addCircle, image, person } from 'ionicons/icons';
 
 @Component({
   selector: 'app-register-alumno',
@@ -13,7 +13,7 @@ import { image, person } from 'ionicons/icons';
 export class RegisterAlumnoComponent  implements OnInit {
 
   constructor() {
-    addIcons({image,person})
+    addIcons({image,person,addCircle})
    }
 
   ngOnInit() { }

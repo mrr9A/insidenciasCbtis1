@@ -27,6 +27,16 @@ export const routes: Routes = [
           import('../components/register-alumno/register-alumno.component').then((m) => m.RegisterAlumnoComponent),
       },
       {
+        path: 'registerAdmin',
+        loadComponent: () =>
+          import('../components/register-administrativo/register-administrativo.component').then((m) => m.RegisterAdministrativoComponent),
+      },
+      {
+        path: 'registeRespon',
+        loadComponent: () =>
+          import('../components/register-responsable/register-responsable.component').then((m) => m.RegisterResponsableComponent),
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full',

@@ -1,3 +1,49 @@
-<p>
-  register-administrativo works!
-</p>
+<div class="ion-page" id="main-content"></div>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Registrar administrativo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form method="POST" enctype="multipart/form-data" autocomplete="off">
+    <ion-input label="Nombre del alumno" formControlName="name" label-placement="floating" fill="outline"
+      placeholder="Enter text"></ion-input><br>
+    <ion-input label="Apellido Paterno" formControlName="flastname" label-placement="floating" fill="outline"
+      placeholder="Enter text"></ion-input><br>
+    <ion-input label="Apellido Materno" formControlName="slastname" label-placement="floating" fill="outline"
+      placeholder="Enter text"></ion-input><br>
+    <ion-input label="Numero de control escolar" formControlName="controlescolar" label-placement="floating"
+      fill="outline" placeholder="Enter text"></ion-input><br>
+    <ion-input label="Curp" formControlName="curp" label-placement="floating" fill="outline"
+      placeholder="Enter text"></ion-input><br>
+
+    <ion-select fill="outline" aria-label="Tutor" placeholder="Selecciona al tutor del alumno" formControlName="tutor">
+      <ion-select-option>turo</ion-select-option>
+    </ion-select>
+    <br>
+    <ion-select fill="outline" aria-label="Grupos" placeholder="Selecciona el grupo del alumno" formControlName="group">
+      <ion-select-option>Nombre</ion-select-option>
+    </ion-select>
+    <br>
+    <ion-input label="Fecha de nacimiento" type="date" formControlName="birthdate" label-placement="floating"
+      fill="outline" placeholder="Enter text"></ion-input><br>
+    <br>
+    <input type="file" formControlName="file" id="fileInput" hidden (change)="onFileSelected($event)">
+    <ion-button size="default" shape="round" expand="block" color="medium"
+      onClick="document.getElementById('fileInput').click()">
+      <ion-icon slot="start" name="image"></ion-icon>
+      Foto de alumno
+    </ion-button>
+    <br>
+
+    <ion-button color="secondary" type="submit" expand="block" shape="round">
+      <ion-icon slot="start" name="add-circle"></ion-icon>
+      Registrar alumno
+    </ion-button>
+  </form>
+</ion-content>

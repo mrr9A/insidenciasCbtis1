@@ -11,63 +11,39 @@
 
 <ion-content class="ion-padding">
   <form method="POST" enctype="multipart/form-data" autocomplete="off">
-    <ion-item>
-      <ion-label position="floating">Nombre del alumno</ion-label>
-      <ion-input type="text" formControlName="name" name="username" required></ion-input>
-    </ion-item>
+    <ion-input label="Nombre del alumno" formControlName="name" label-placement="floating" fill="outline"
+      placeholder="Enter text"></ion-input><br>
+    <ion-input label="Apellido Paterno" formControlName="flastname" label-placement="floating" fill="outline"
+      placeholder="Enter text"></ion-input><br>
+    <ion-input label="Apellido Materno" formControlName="slastname" label-placement="floating" fill="outline"
+      placeholder="Enter text"></ion-input><br>
+    <ion-input label="Numero de control escolar" formControlName="controlescolar" label-placement="floating"
+      fill="outline" placeholder="Enter text"></ion-input><br>
+    <ion-input label="Curp" formControlName="curp" label-placement="floating" fill="outline"
+      placeholder="Enter text"></ion-input><br>
 
-    <ion-item>
-      <ion-label position="floating">Apellido Paterno</ion-label>
-      <ion-input type="text" formControlName="flastname" name="flastname" required></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Apellido Materno</ion-label>
-      <ion-input type="text" formControlName="slastname" name="slastname" required></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Numero de control escolar</ion-label>
-      <ion-input type="text" formControlName="controlescolar" name="controlescolar" required></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Curp</ion-label>
-      <ion-input type="text" formControlName="curp" name="curp" required></ion-input>
-    </ion-item>
-
-    <ion-list>
-      <ion-item>
-        <ion-select aria-label="Tutor" placeholder="Selecciona al tutor del alumno" formControlName="tutor">
-          <ion-select-option>turo</ion-select-option>
-        </ion-select>
-      </ion-item>
-    </ion-list>
+    <ion-select fill="outline" aria-label="Tutor" placeholder="Selecciona al tutor del alumno" formControlName="tutor">
+      <ion-select-option>turo</ion-select-option>
+    </ion-select>
     <br>
-    <ion-list>
-      <ion-item>
-        <ion-select aria-label="Grupos" placeholder="Selecciona el grupo del alumno" formControlName="group">
-          <ion-select-option>Nombre</ion-select-option>
-        </ion-select>
-      </ion-item>
-    </ion-list>
+    <ion-select fill="outline" aria-label="Grupos" placeholder="Selecciona el grupo del alumno" formControlName="group">
+      <ion-select-option>Nombre</ion-select-option>
+    </ion-select>
     <br>
-    <ion-item>
-      <ion-label position="floating">Fecha de nacimiento</ion-label>
-      <ion-input type="date" formControlName="birthdate" name="birthdate" required></ion-input>
-    </ion-item><br>
-
-    <ion-item>
-      <ion-label>Cargar imagen:</ion-label>
-      <input type="file" formControlName="file" id="fileInput" hidden (change)="onFileSelected($event)">
-      <ion-button size="default" shape="round" expand="block" color="secondary"
-        onClick="document.getElementById('fileInput').click()">
-        <ion-icon slot="start" name="image"></ion-icon>
-        Seleccionar Archivo
-      </ion-button>
-    </ion-item>
+    <ion-input label="Fecha de nacimiento" type="date" formControlName="birthdate" label-placement="floating"
+      fill="outline" placeholder="Enter text"></ion-input><br>
+    <br>
+    <input type="file" formControlName="file" id="fileInput" hidden (change)="onFileSelected($event)">
+    <ion-button size="default" shape="round" expand="block" color="medium"
+      onClick="document.getElementById('fileInput').click()">
+      <ion-icon slot="start" name="image"></ion-icon>
+      Foto de alumno
+    </ion-button>
     <br>
 
-    <ion-button color="secondary" type="submit" expand="block" shape="round">Registrar alumno</ion-button>
+    <ion-button color="secondary" type="submit" expand="block" shape="round">
+      <ion-icon slot="start" name="add-circle"></ion-icon>
+      Registrar alumno
+    </ion-button>
   </form>
 </ion-content>
