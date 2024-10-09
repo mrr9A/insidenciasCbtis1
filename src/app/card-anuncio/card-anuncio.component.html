@@ -1,32 +1,19 @@
-<ion-scroll scroll-x="false" class="horizontal-scroll" forceOverscroll="false">
-  <div class="scroll-container">
-    <!-- Agrega más cards si es necesario -->
-    <ion-card class="scroll-card">
-      <img alt="Anuncio 2" src="https://www.cbtis248.edu.mx/bienvenida.png" />
-      <ion-card-header>
-        <ion-card-title>Otro anuncio importante</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        Información relevante sobre actividades y fechas importantes para el próximo semestre.
-      </ion-card-content>
-<!--       <ion-button size="large" shape="round" class="ion-text-wrap">
-        VER MÁS
-        <ion-icon aria-hidden="true" name="square"></ion-icon>
-      </ion-button> -->
-    </ion-card>
+ <ion-card>
+  <ion-card-header>
+    <ion-card-title>Anuncios importantes</ion-card-title>
+    <ion-card-subtitle color="danger">Por favor revisar bien los avisos de sus hijos/as</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
 
-    <ion-card class="scroll-card">
-      <img alt="Anuncio 2" src="https://www.cbtis248.edu.mx/bienvenida.png" />
-      <ion-card-header>
-        <ion-card-title>Otro anuncio importante</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        Información relevante sobre actividades y fechas importantes para el próximo semestre.
-      </ion-card-content>
-<!--       <ion-button size="large" shape="round" class="ion-text-wrap">
-        VER MÁS
-        <ion-icon aria-hidden="true" name="square"></ion-icon>
-      </ion-button> -->
-    </ion-card>
-  </div>
-</ion-scroll>
+    <ion-item button detail (click)="openQrModal()">
+      <ion-thumbnail slot="start">
+        <img alt="Silhouette of mountains" src="https://www.cbtis248.edu.mx/bienvenida.png" />
+      </ion-thumbnail>
+      <ion-label>
+        Reunión de padres de familia 13 de octubre de 2024
+      </ion-label>
+      <ion-icon name="caret-forward" slot="end" class="icon-forward"></ion-icon>
+    </ion-item>
+    <!-- Otros items iguales -->
+  </ion-card-content>
+</ion-card>

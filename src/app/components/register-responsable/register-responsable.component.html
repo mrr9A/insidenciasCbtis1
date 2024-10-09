@@ -11,7 +11,7 @@
 
 <ion-content class="ion-padding">
   <form method="POST" enctype="multipart/form-data" autocomplete="off">
-    <ion-input label="Nombre del alumno" formControlName="name" label-placement="floating" fill="outline"
+    <ion-input label="Nombre del responsable" formControlName="name" label-placement="floating" fill="outline"
       placeholder="Escriba su nombre"></ion-input><br>
     <ion-input label="Apellido Paterno" formControlName="flastname" label-placement="floating" fill="outline"
       placeholder="Escriba su apellido paterno"></ion-input><br>
@@ -19,6 +19,8 @@
       placeholder="Escriba su apellido materno"></ion-input><br>
     <ion-input label="Numero de telefono" type="number" formControlName="controlescolar" label-placement="floating"
       fill="outline" placeholder="Escriba su numero de telefono"></ion-input><br>
+    <ion-input type="email" label="Correo electronico" formControlName="curp" label-placement="floating" fill="outline"
+      placeholder="Escriba su correo electronico" required></ion-input><br>
     <ion-input label="Curp" formControlName="curp" label-placement="floating" fill="outline"
       placeholder="Escriba su curp"></ion-input><br>
 

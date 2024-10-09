@@ -1,0 +1,5 @@
+.autosize-textarea {
+  resize: none; /* Deshabilita la opción de redimensionar manualmente */
+  overflow-y: hidden; /* Oculta la barra de scroll vertical */
+  min-height: 54px; /* Establece una altura mínima si es necesario */
+}
