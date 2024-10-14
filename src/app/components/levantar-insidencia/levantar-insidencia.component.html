@@ -1,0 +1,67 @@
+<div class="ion-page" id="main-content"></div>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Registrar Incidencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form method="POST" enctype="multipart/form-data" autocomplete="off">
+
+    <!-- Selección del Grupo -->
+    <ion-select fill="outline" aria-label="Grupo" placeholder="Selecciona el grupo del alumno" formControlName="grupo">
+      <ion-select-option>1°A - Administración</ion-select-option>
+      <ion-select-option>1°B - Soporte y Mantenimiento de Computo</ion-select-option>
+      <ion-select-option>1°C - Programación</ion-select-option>
+      <ion-select-option>1°D - Mantenimiento Automotriz</ion-select-option>
+    </ion-select>
+    <br>
+
+    <!-- Selección del Alumno -->
+    <ion-select fill="outline" aria-label="Alumno" placeholder="Selecciona al alumno" formControlName="alumno">
+      <ion-select-option>Alumno 1</ion-select-option>
+      <ion-select-option>Alumno 2</ion-select-option>
+      <ion-select-option>Alumno 3</ion-select-option>
+    </ion-select>
+    <br>
+
+    <!-- Tipo de Incidencia -->
+    <ion-select fill="outline" aria-label="Tipo de Incidencia" placeholder="Selecciona el tipo de incidencia"
+      formControlName="tipoIncidencia">
+      <ion-select-option>Inasistencia sin justificar</ion-select-option>
+      <ion-select-option>Falta de respeto</ion-select-option>
+      <ion-select-option>Indisciplina</ion-select-option>
+      <ion-select-option>Problemas de salud</ion-select-option>
+      <ion-select-option>Daño a instalaciones</ion-select-option>
+      <ion-select-option>Otro</ion-select-option>
+    </ion-select>
+    <br>
+
+    <!-- Descripción de la Incidencia -->
+    <ion-textarea #myTextarea class="autosize-textarea" label="Descripción de la Incidencia"
+      formControlName="descripcionIncidencia" label-placement="floating" fill="outline"
+      placeholder="Escribe la descripción de la incidencia" (ionInput)="adjustTextarea($event)"></ion-textarea>
+    <br>
+
+    <!-- Lugar de la Incidencia -->
+    <ion-input fill="outline" placeholder="Lugar de la incidencia" formControlName="lugar"></ion-input>
+    <br>
+
+    <!-- Evidencia adjunta (opcional) -->
+    <input type="file" formControlName="file" id="fileInput" hidden (change)="onFileSelected($event)">
+    <ion-button size="default" shape="round" expand="block" color="medium"
+      onClick="document.getElementById('fileInput').click()">
+      <ion-icon slot="start" name="image"></ion-icon>
+      Adjuntar evidencia (opcional)
+    </ion-button>
+    <br>
+    <!-- Botón de Registrar -->
+    <ion-button color="secondary" type="submit" expand="block" shape="round">
+      <ion-icon slot="start" name="add-circle"></ion-icon>
+      Registrar Incidencia
+    </ion-button>
+  </form>
+</ion-content>

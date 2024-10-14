@@ -42,6 +42,16 @@ export const routes: Routes = [
           import('../components/register-aviso/register-aviso.component').then((m) => m.RegisterAvisoComponent),
       },
       {
+        path: 'LevantarInsidencia',
+        loadComponent: () =>
+          import('../components/levantar-insidencia/levantar-insidencia.component').then((m) => m.LevantarInsidenciaComponent),
+      },
+      {
+        path: 'HistorialInsidencia',
+        loadComponent: () =>
+          import('../components/historial-insidencia/historial-insidencia.component').then((m) => m.HistorialInsidenciaComponent),
+      },
+      {
         path: '',
         redirectTo: '/cbtis248/inicio',
         pathMatch: 'full',

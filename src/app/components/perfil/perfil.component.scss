@@ -16,15 +16,25 @@ ion-card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
-/* Asegura que la imagen del avatar se ajuste correctamente */
-ion-avatar img {
+/* Avatar cuadrado sin bordes redondeados */
+.avatar-card {
   width: 270px;
   height: 270px;
-  object-fit: cover;
+}
+
+/* Centra el avatar */
+.avatar-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+}
+
+/* Asegura que la imagen del avatar se ajuste correctamente */
+ion-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Estilo para los ion-items */
